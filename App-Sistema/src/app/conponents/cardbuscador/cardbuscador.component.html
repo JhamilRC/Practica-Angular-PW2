@@ -1,0 +1,35 @@
+<h1>Buscando producto: <small>{{termino}}</small></h1>
+<hr>
+<div class="row animated fadeIn fast" *ngIf="productos.length == 0">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            No existen resultados con el término: {{termino}}
+        </div>
+    </div>
+</div>
+<div class="card-columns">
+    <app-cardproducto-tarjeta [producto]="foo"
+        [index]="foo.idx" *ngFor="let foo of productos">
+    </app-cardproducto-tarjeta>
+</div>
+
+
+<!--
+<div class="fadeIn fast" *ngIf="productos.length == 0">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            No existen resultados con el término: {{termino}}
+        </div>
+    </div>
+</div>
+
+<div class="card-columns ">
+    <app-cardproducto-tarjeta (productoSeleccionado)="verProducto($event)" [producto]="foo" [index]="foo.id"
+        *ngFor="let foo of productos">
+    </app-cardproducto-tarjeta>
+</div>
+ <div class="row  row-cols-3 g-3 m-3">
+    <app-cardproducto-tarjeta (productoSeleccionado)="verProducto($event)" [producto]="foo" [index]="i"
+        *ngFor="let foo of productos; let i= index">
+    </app-cardproducto-tarjeta>
+</div> -->

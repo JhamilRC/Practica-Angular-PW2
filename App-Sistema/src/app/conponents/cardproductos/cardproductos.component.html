@@ -1,0 +1,29 @@
+<h1>LISTA DE PRODUCTOS</h1>
+
+<tabLe class="table">
+   <thead>
+      <tr>
+         <th scope="col">#</th>
+         <th scope="col">Nombre</th>
+         <th scope="col">Precio</th>
+         <th scope="col">ver</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr *ngFor="let pro of productos;">
+         <th scope="row">i</th>
+         <td>{{pro.nombre}}</td>
+         <td>{{pro.precio}}</td>
+         <td>{{pro.precio}}</td>
+      </tr>
+   </tbody>
+</tabLe>
+
+<h1>Lista de productos</h1>
+<hr>
+<div class="card"></div>
+<div class="row  row-cols-3 g-3 m-3">
+   <app-cardproducto-tarjeta (productoSeleccionado)="verProducto($event)" [producto]="foo" [index]="i"
+      *ngFor="let foo of productos; let i= index">
+   </app-cardproducto-tarjeta>
+</div>
